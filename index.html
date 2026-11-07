@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi CV</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=VT323&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/Icono_CV.ico">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <p class="prompt"><span class="ps">$</span> gcc -Wall -Wextra cv.c -o cv &amp;&amp; ./cv</p>
+        <h1><span id="nombre"></span><span class="caret" aria-hidden="true"></span></h1>
+        <p class="rol" id="rol"></p>
+        <p class="salida" id="salida"></p>
+      </header>
+
+      <aside class="side izq" id="izq" aria-label="Información"></aside>
+      <aside class="side der" id="der" aria-label="Contacto"></aside>
+
+      <div class="codigo">
+        <div class="bar">
+          <span class="tab">cv.c</span>
+          <span class="bar-right">
+            <span class="meta">C17 · 0 warnings</span>
+            <button id="tema" type="button">◐ tema</button>
+          </span>
+        </div>
+        <main class="editor" id="code" aria-label="CV escrito en C"></main>
+      </div>
+
+      <section class="galeria" id="certificados-img" aria-labelledby="gal-t">
+        <p class="prompt" id="gal-t"><span class="ps">$</span> ls certificados/</p>
+        <p class="salida" id="gal-n"></p>
+        <div class="grid" id="galeria"></div>
+      </section>
+      <div class="lb" id="lb" hidden><img id="lb-img" alt=""></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
